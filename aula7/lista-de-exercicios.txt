@@ -1,0 +1,35 @@
+1)
+A)Inserção: L -> u -> c -> a -> s -> None
+B) Impressão: L -> u -> c -> a -> s -> None
+C) Após excluir o primeiro: u -> c -> a -> s -> None
+D) Verificação: lista atual u -> c -> a -> s -> None
+E) Pesquisa pelo último caractere "s": True
+F) Exclusão de "c": u -> a -> s -> None
+G) Verificação: lista atual u -> a -> s -> None
+
+
+
+
+2. Inserindo no início a sequência 3, 7 e 6:
+Resultado final: 6 -> 7 -> 3 -> None
+
+
+3. Exclusão do elemento 3 na lista [1, 5, 3, 2]:
+Tabela:
+valor	atual	anterior
+3	3	5
+Resultado final: 1 -> 5 -> 2 -> None
+
+4. Inserção pode ser feita no início ou no final da lista.
+
+
+5. Estrutura usada: Nó (Node), contendo dado + ponteiro.
+
+
+6. Lista está vazia quando head == None.
+
+
+7. Está no último elemento quando prox == None.
+
+
+

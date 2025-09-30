@@ -1,0 +1,16 @@
+2. Dado o array [8, 6, 4, 2, 0], uma chamada de ordenação através do algoritmo Quick Sort cujo a assinatura da função é quick_sort(array, inicio, final) é feita de qual forma:
+
+a.    ( ) quick_sort( array, 8, 0);
+b.    ( ) quick_sort( [8, 6, 4, 2, 0]);
+c.    (X) quick_sort( array, 0, len(array) - 1 );
+d.    ( ) quick_sort( [8, 6, 4, 2, 0], 0, 8);
+
+
+
+
+a. O(1) - Constante: É super rápido. O tempo é sempre o mesmo, não importa a entrada. Exemplo: Pegar um item pelo índice, tipo lista[5].
+b. O(N) - Linear: é proporcional. Se a entrada dobra de tamanho, o tempo de execução também dobra. Exemplo: Um for que passa por cada item da lista uma vez.
+c. O(N²) - Quadrático: Se a entrada dobra, o tempo aumenta 4 vezes. Exemplo: Um for dentro de outro for.
+d. O(log N) - Logarítmico: Mesmo com uma entrada gigante, ele é muito rápido porque vai quebrando o problema pela metade a cada passo. Exemplo: merge Sort.
+e. O(2^N) - Exponencial: A cada novo item, o tempo simplesmente dobra. Fica impossível de rodar rapidinho. Exemplo: Uma função recursiva que se chama duas vezes ( cálculo de Fibonacci).
+f. O(3^N) - Exponencial: Cada item a mais faz o tempo triplicar. Exemplo: Uma recursão que se chama três vezes a cada passo.

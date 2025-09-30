@@ -1,0 +1,32 @@
+1.	Implementar em linguagem Python o pseudocódigo do algoritmo “Lista Encadeada Dupla” visto na Aula 08. Faça também:
+a.	Demonstrar a inserção de cada um dos caracteres que compõem seu primeiro nome;
+b.	Demonstre a impressão de todos os elementos inseridos no item a;
+c.	Faça a exclusão do primeiro elemento da lista;
+d.	Verifique se a operação executada no item c foi concluída; 
+e.	Faça a pesquisa pelo último caractere do seu nome. Qual o retorno do algoritmo?
+f.	Escolha um elemento qualquer (não pode ser o primeiro) e faça a sua exclusão.
+g.	Verifique se a operação executada no item f foi concluída;
+
+
+
+2.	Considere uma Lista Encadeada Dupla vazia. Insira no início da lista a sequência de valores 3, 7 e 6. Demonstre de forma detalhada (desenho) a inserção dos nós e a inserção e sobrescrita dos ponteiros.
+          +---+---+---+     +---+---+---+     +---+---+---+
+primeiro->|Nul| 6 |->|<---->|<-| 7 |->|<---->|<-| 3 |Nul|<-ultimo
+          +---+---+---+     +---+---+---+     +---+---+---+
+
+3.	Faça a exclusão do elemento 7 da lista preenchida na Questão 2. Demonstre através de desenho os detalhes da exclusão do elemento solicitado bem como a sobrescrita dos ponteiros.
+          +---+---+---+     +---+---+---+
+primeiro->|Nul| 6 |->|<---->|<-| 3 |Nul|<-ultimo
+          +---+---+---+     +---+---+---+		
+
+4.	Onde pode ser realizada a inserção de novos elementos em uma Lista Encadeada Dupla? 
+A inserção pode ser realizada no início e no final da lista.
+
+5.	Qual o nome da estrutura que a Lista Encadeada Dupla utiliza para guardar seus dados?
+Nó
+
+6.	Qual critério é utilizado para saber se uma Lista Encadeada Dupla está vazia?
+quando o ponteiro que aponta para o primeiro elemento é nulo
+
+7.	Qual critério é utilizado para saber se o algoritmo de busca está no último elemento de uma Lista Encadeada Dupla?
+proximo do nó atual é Nulo
