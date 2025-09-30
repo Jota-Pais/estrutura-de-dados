@@ -7,7 +7,6 @@ class ListaEncadeada:
     def __init__(self):
         self.head = None
 
-    
     def inserir(self, dado):
         novo = Node(dado)
         if self.head is None:
@@ -17,7 +16,6 @@ class ListaEncadeada:
             while atual.prox:
                 atual = atual.prox
             atual.prox = novo
-
     
     def imprimir(self):
         atual = self.head
@@ -29,7 +27,6 @@ class ListaEncadeada:
     def excluir_primeiro(self):
         if self.head:
             self.head = self.head.prox
-
     
     def excluir(self, valor):
         atual = self.head

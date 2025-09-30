@@ -117,7 +117,7 @@ lista_nome.mostrar_inicio()
 
 print("\ne. Pesquisa pelo caractere 'o':")
 ultimo_caractere = meu_nome[-1]
-resultado_pesquisa = lista_nome.pesquisar(ultimo_caractere)
+resultado_pesquisa = lista_nome.mostrar_final()
 if resultado_pesquisa:
     print(f"Retorno: No encontrado com valor '{resultado_pesquisa.valor}'")
 else:
