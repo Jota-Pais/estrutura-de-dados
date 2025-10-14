@@ -1,0 +1,77 @@
+============================================================
+                        RESOLUÇÃO DOS EXERCÍCIOS
+============================================================
+
+1.	Demonstre através de desenho a inserção da sequência {60,50,70,40,65,55,75} em uma Árvore Binária;
+
+	A árvore resultante após todas as inserções é:
+
+                  60
+                 /  \
+               50    -- 70
+               / \     / \
+              40 - 55  65 - 75
+
+
+
+2.	Demonstrar a sequência de nós visitados em uma travessia em pré-ordem;
+
+	Sequência (Raiz, Esquerda, Direita):
+	60, 50, 40, 55, 70, 65, 75
+
+
+
+3.	Demonstrar a sequência de nós visitados em uma travessia em ordem;
+
+	Sequência (Esquerda, Raiz, Direita):
+	40, 50, 55, 60, 65, 70, 75
+
+
+
+4.	Demonstrar a sequência de nós visitados em uma travessia em pós-ordem;
+
+	Sequência (Esquerda, Direita, Raiz):
+	40, 55, 50, 65, 75, 70, 60
+
+
+
+5.	Remova o nó 50 e redesenhe a Árvore;
+
+	Para remover o nó 50, que possui dois filhos, o substituímos pelo seu sucessor em-ordem (o menor nó da subárvore direita), que é o 55.
+
+                  60
+                 /  \
+               55    -- 70
+               /       / \
+              40       65 - 75
+
+
+
+6.	Remova o nó 60 e redesenhe a Árvore;
+
+	Partindo da árvore anterior, removemos o nó 60 (a raiz). Seu sucessor em-ordem é o 65, que se tornará a nova raiz.
+
+                  65
+                 /  \
+               55    -- 70
+               /         \
+              40          75
+
+
+
+7.	Considere a árvore binária da figura a seguir...
+
+	A figura para esta questão não foi fornecida. No entanto, analisando as alternativas, apenas uma delas apresenta um par válido de travessias pré-ordem e pós-ordem para uma mesma árvore binária.
+
+	Resposta: E) (12 4 2 8 6 16) e (2 6 8 4 16 12).
+
+	Justificativa:
+	- Na pré-ordem, o primeiro elemento (12) é a raiz.
+	- Na pós-ordem, o último elemento (12) é a raiz.
+	Isso confirma que 12 é a raiz. A partir daí, é possível reconstruir uma árvore consistente com essas duas sequências, o que não ocorre com os outros pares.
+
+
+
+8.	Observe a Árvore Binária de Busca (ABB) a seguir...
+
+	A figura para esta questão não foi fornecida. Não é possível determinar a sequência de inserção correta sem a visualização da árvore. Cada alternativa geraria uma árvore diferente.
