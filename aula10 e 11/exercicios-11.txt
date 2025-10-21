@@ -1,0 +1,210 @@
+1.  Dada a árvore abaixo, indique os nós folha o grau da árvore o altura da árvore os descendentes do nó 63
+    nós  folha: 2,52,60,5,83 
+    grau da árvore: 2
+    altura da árvore: 3
+    descendentes do nó 63: 7,69,2,59,5,90,52,60,83
+
+
+2 - Quais são as seqüências de nós encontradas ao atravessar a árvore abaixo em in-ordem, pré-ordem e pós-ordem?
+    Pré-ordem (Raiz, Esquerda, Direita): 8, 9, 11, 15, 19, 20, 21, 7, 3, 2, 1, 5, 6, 4, 13, 14, 10, 12, 17, 16, 18
+
+    In-ordem (Esquerda, Raiz, Direita): 19, 15, 11, 21, 20, 9, 2, 3, 7, 1, 8, 4, 13, 6, 14, 10, 5, 17, 16, 12, 18
+   
+    Pós-ordem (Esquerda, Direita, Raiz): 19, 15, 21, 20, 11, 2, 3, 1, 7, 9, 13, 4, 10, 14, 6, 16, 17, 18, 12, 5, 8
+
+
+3 - Determine a travessia pré, in e pós-ordem da árvore abaixo:
+    Pré-ordem (Raiz, Esquerda, Direita): a, b, d, g, h, j, c, e, i, k, f
+
+    In-ordem (Esquerda, Raiz, Direita): g, d, j, h, b, a, k, i, e, c, f
+
+    Pós-ordem (Esquerda, Direita, Raiz): g, j, h, d, b, k, i, e, f, c, a
+
+
+4 - Remova daseguinte árvore AVL o nó 8 e, em seguida, adicione um nó com valor 9.
+
+    print("Árvore Original (em-ordem):")
+    arvore.em_ordem(arvore.raiz)
+    print("\n")
+
+    print("Removendo o nó 8...")
+    arvore.excluir(8)
+    print("Árvore após excluir o 8 (em-ordem):")
+    arvore.em_ordem(arvore.raiz)
+    print("\n")
+
+    print("Adicionando o nó 9...")
+    arvore.inserir(9)
+    print("Árvore final (em-ordem):")
+    arvore.em_ordem(arvore.raiz)
+    print("\n")
+
+
+5 - Exiba as árvores binárias com alturas de 2, 3, 4, 5 e 6, que contenham as sete chaves:
+1, 4, 5, 10, 16, 17 e 21.
+
+    print("--- Altura 2 ---")
+    arvore_h2 = ArvoreBinariaBusca()
+    # Ordem de inserção balanceada
+    arvore_h2.inserir(10)
+    arvore_h2.inserir(4)
+    arvore_h2.inserir(17)
+    arvore_h2.inserir(1)
+    arvore_h2.inserir(5)
+    arvore_h2.inserir(16)
+    arvore_h2.inserir(21)
+
+    print("Pré-ordem (estrutura): ", end='')
+    arvore_h2.pre_ordem(arvore_h2.raiz)
+    print("\nEm-ordem (chaves):    ", end='')
+    arvore_h2.em_ordem(arvore_h2.raiz)
+    print(f"\nAltura: {arvore_h2.get_altura()}")
+
+
+    print("\n--- Altura 3 ---")
+    arvore_h3 = ArvoreBinariaBusca()
+    # Começar com 4 desbalanceia
+    arvore_h3.inserir(4)
+    arvore_h3.inserir(1)
+    arvore_h3.inserir(10) # 4.dir
+    arvore_h3.inserir(5)  # 10.esq
+    arvore_h3.inserir(17) # 10.dir
+    arvore_h3.inserir(16) # 17.esq (altura 3)
+    arvore_h3.inserir(21) # 17.dir (altura 3)
+
+    print("Pré-ordem (estrutura): ", end='')
+    arvore_h3.pre_ordem(arvore_h3.raiz)
+    print("\nEm-ordem (chaves):    ", end='')
+    arvore_h3.em_ordem(arvore_h3.raiz)
+    print(f"\nAltura: {arvore_h3.get_altura()}")
+
+
+    print("\n--- Altura 4 ---")
+    arvore_h4 = ArvoreBinariaBusca()
+    arvore_h4.inserir(4)
+    arvore_h4.inserir(1)
+    arvore_h4.inserir(5)  # 4.dir
+    arvore_h4.inserir(10) # 5.dir
+    arvore_h4.inserir(17) # 10.dir
+    arvore_h4.inserir(16) # 17.esq (altura 4)
+    arvore_h4.inserir(21) # 17.dir (altura 4)
+
+    print("Pré-ordem (estrutura): ", end='')
+    arvore_h4.pre_ordem(arvore_h4.raiz)
+    print("\nEm-ordem (chaves):    ", end='')
+    arvore_h4.em_ordem(arvore_h4.raiz)
+    print(f"\nAltura: {arvore_h4.get_altura()}")
+
+
+    print("\n--- Altura 5 ---")
+    arvore_h5 = ArvoreBinariaBusca()
+    arvore_h5.inserir(4)
+    arvore_h5.inserir(1)
+    arvore_h5.inserir(5)
+    arvore_h5.inserir(10)
+    arvore_h5.inserir(16) # Inserindo em ordem crescente à direita
+    arvore_h5.inserir(17)
+    arvore_h5.inserir(21) # (Caminho: 4-5-10-16-17-21)
+
+    print("Pré-ordem (estrutura): ", end='')
+    arvore_h5.pre_ordem(arvore_h5.raiz)
+    print("\nEm-ordem (chaves):    ", end='')
+    arvore_h5.em_ordem(arvore_h5.raiz)
+    print(f"\nAltura: {arvore_h5.get_altura()}")
+
+
+    print("\n--- Altura 6 ---")
+    arvore_h6 = ArvoreBinariaBusca()
+    # Inserção em ordem (cria uma árvore "lista")
+    arvore_h6.inserir(1)
+    arvore_h6.inserir(4)
+    arvore_h6.inserir(5)
+    arvore_h6.inserir(10)
+    arvore_h6.inserir(16)
+    arvore_h6.inserir(17)
+    arvore_h6.inserir(21)
+
+    print("Pré-ordem (estrutura): ", end='')
+    arvore_h6.pre_ordem(arvore_h6.raiz)
+    print("\nEm-ordem (chaves):    ", end='')
+    arvore_h6.em_ordem(arvore_h6.raiz)
+    print(f"\nAltura: {arvore_h6.get_altura()}")
+
+
+6 - Considere a árvore mostrada na figura abaixo e responda:
+ 
+                          
+    (a) quais são os nós folhas?
+    B, F, I, O
+    (b) quais nós são ancestrais de C?
+    G, L
+    (c) quais são os descendentes de C?
+    B,E,F
+    (d) qual é a altura da árvore?
+    4
+    (e) quais são os nós com grau 1 e 2?
+    grau 1: R,E 
+    grau 2: L,G,C
+    (f) quantos caminhos de comprimento três existem?
+    3
+
+
+7 – Execute duas inserções e duas remoções de chaves da árvore mostradas abaixo. Desenhe árvore resultante da operação correspondente, para cada operação.
+
+(Usando a classe ArvoreBinariaBusca fornecida. As chaves escolhidas para as operações são: Inserir 50, Inserir 75, Remover 66, Remover 24)
+
+Árvore Inicial:
+
+       43
+      /  \
+     24   66
+    / \  /  \
+   23 36 55  99
+  /      /   / \
+ 16     53  76 101
+            /
+           71
+1. Após Inserir 50: (Caminho: 43 -> 66 -> 55 -> 53 -> esquerda)
+
+       43
+      /  \
+     24   66
+    / \  /  \
+   23 36 55  99
+  /      /   / \
+ 16     53  76 101
+        /   /
+       50  71
+2. Após Inserir 75: (Caminho: 43 -> 66 -> 99 -> 76 -> 71 -> direita)
+
+       43
+      /  \
+     24   66
+    / \  /  \
+   23 36 55  99
+  /      /   / \
+ 16     53  76 101
+        /   / \
+       50  71  75
+3. Após Remover 66: (Nó 66 tem dois filhos. É substituído pelo sucessor, 71. O nó 76 adota o filho direito de 71, que é o 75, como seu novo filho esquerdo).
+
+       43
+      /  \
+     24   71
+    / \  /  \
+   23 36 55  99
+  /      /   / \
+ 16     53  76 101
+        /    \
+       50     75
+4. Após Remover 24 (Árvore Final): (Nó 24 tem dois filhos. É substituído pelo sucessor, 36. O nó 36 adota o filho esquerdo de 24, que é o 23).
+
+       43
+      /  \
+     36   71
+    /    /  \
+   23   55  99
+  /     /   / \
+ 16    53  76 101
+       /    \
+      50     75
